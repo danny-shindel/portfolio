@@ -1,0 +1,107 @@
+@font-face{
+    font-family:'digital';
+    src: url("../Glass_TTY_VT220.ttf")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vmin;
+    background-color: rgb(222,209,128);
+}
+
+.typing0::after, .typing1::after, .typing2::after,
+.typing3::after, .typing4::after, .typing5::after,
+.typing6::after, .typing7::after, .typing8::after{
+    content: "";
+    border-right: 1vmin solid white;
+    animation: blink 0.6s infinite;
+}
+
+.erwin::after{
+    content: "";
+    border-right: 1vmin solid black;
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.about-container {
+    margin-top: 20vh;
+    margin: 0 auto;
+    width: 100vh;
+    color: white;
+}
+.terminal-header {
+    height: 28px;
+    background-color: #e4e3e5;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 9px;
+}
+
+.red {
+    background-color: #f96256;
+    border: solid 1px #f65549;
+}
+
+.yellow {
+    background-color: #fdbc3d;
+    border: solid 1px #ffb524;
+}
+
+.green {
+    background-color: #33c948;
+    border: solid 1px #2dbb41;
+}
+
+.terminal-window {
+    background-color: black;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15),
+    0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
+    font-family: 'Monaco', Consolas, 'Lucida Console', monospace;
+    height: 50vmin;
+    padding: 5vmin;
+    font-size: 2.3vmin;
+    
+}
+
+#response {
+    color: #e7d184
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#test {
+    display: flex;
+}
+
+#gmail, #linkedin, #github, #portfolio {
+    color: rgb(65, 254, 255);
+}
+
+#gmail:hover, #linkedin:hover, #github:hover, #portfolio:hover {
+    cursor: pointer;
+}
