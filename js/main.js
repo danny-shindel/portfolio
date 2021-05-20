@@ -127,7 +127,7 @@ function clickGitHub() {
 
 function clickPortfolio() {
     window.open(
-        'https://www.linkedin.com/in/dannyshindel',
+        './pdf/Daniel.Shindel.Resume.pdf',
         '_blank' 
     );
 }
