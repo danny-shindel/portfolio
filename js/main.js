@@ -1,8 +1,8 @@
 const texts = [ 
 '> Danny.currentLocation',
-'> "Santa Barbara, CA"',
+' "Santa Barbara, CA"',
 '> Danny.contactInfo',
-'> ["',
+'["',
 'dannyshindel@gmail.com',
 '", "',
 'LinkedIn',
@@ -10,17 +10,28 @@ const texts = [
 'github',
 '"]',
 '> Danny.resume',
-'> "',
+'"',
 'dannyshindel.pdf',
 '"',
+'> Danny.skills',
+'["Javascript", "CSS", "HTML", "React", "Python", "Django", "Express", "MongoDB", "Postgresql", "Node", "AWS"]',
+'> Danny.education',
+'["Software Engineering - General Assembly",',
+'"B.S. Landscape Architecture - University of California, Davis"]',
 '> Danny.interests',
-'> ["design", "surfing", "ceramics", "motorcycles"]',
+'["design", "surfing", "ceramics", "film"]',
 '> '];
 let count = 0;
 let index = 0;
 let text = 0;
 let currentText = '';
 let letter = '';
+
+const nameType = ["> Danny Shindel"];
+let countName = 0;
+let indexName = 0;
+let currentTextName = '';
+let letterName = '';
 
 const textEl0 = document.querySelector('.typing0');
 const textEl1 = document.querySelector('.typing1');
@@ -39,22 +50,29 @@ const textEl13 = document.querySelector('.typing13');
 const textEl14 = document.querySelector('.typing14');
 const textEl15 = document.querySelector('.typing15');
 const textEl16 = document.querySelector('.typing16');
+const textEl17 = document.querySelector('.typing17');
+const textEl18 = document.querySelector('.typing18');
+const textEl19 = document.querySelector('.typing19');
+const textEl20 = document.querySelector('.typing20');
+const textEl21 = document.querySelector('.typing21');
+const nameEl = document.querySelector('.typingName');
 
 document.getElementById('portfolio').addEventListener('click', clickPortfolio);
 document.getElementById('gmail').addEventListener('click', clickGmail);
 document.getElementById('linkedin').addEventListener('click', clickLinkedIn);
 document.getElementById('github').addEventListener('click', clickGitHub);
 
-const classes = ['typing0', 'typing1', 'typing2', 'typing3', 'typing4', 'typing5', 'typing6', 'typing7', 'typing8', 'typing9', 'typing10', 'typing11', 'typing12', 'typing13', 'typing14', 'typing15', 'typing16']
-const doc = [textEl0, textEl1, textEl2, textEl3, textEl4, textEl5, textEl6, textEl7, textEl8, textEl9, textEl10, textEl11, textEl12, textEl13, textEl14, textEl15, textEl16]
+const classes = ['typing0', 'typing1', 'typing2', 'typing3', 'typing4', 'typing5', 'typing6', 'typing7', 'typing8', 'typing9', 'typing10', 'typing11', 'typing12', 'typing13', 'typing14', 'typing15', 'typing16', 'typing17', 'typing18', 'typing19', 'typing20', 'typing21']
+const doc = [textEl0, textEl1, textEl2, textEl3, textEl4, textEl5, textEl6, textEl7, textEl8, textEl9, textEl10, textEl11, textEl12, textEl13, textEl14, textEl15, textEl16, textEl17, textEl18, textEl19, textEl20, textEl21]
 
 
 type()
+typeName()
 
 function type() {
     doc[text].classList.remove("erwin");
     if (count !== text) {
-        if (text === 16) return
+        if (text === 21) return
         doc[text].classList.remove(classes[text])
         text++;
         setTimeout(type, 5);
@@ -68,34 +86,49 @@ function type() {
         index = 0;
         currentText = ''
     }
-    setTimeout(type, 15);
+    setTimeout(type, 10);
+}
+
+function typeName() {
+    if (countName > 0) {
+        return
+    }
+    currentTextName = nameType[0];
+    letterName = currentTextName.slice(0, ++indexName);
+    nameEl.textContent = letterName;
+    if (letterName.length === currentTextName.length) {
+        countName++;
+        indexName = 0;
+        currentTextName = ''
+    }
+    setTimeout(typeName, 100);
 }
 
 function clickGmail() {
     window.open(
         'mailto:dannyshindel@gmail.com',
-        '_blank' // <- This is what makes it open in a new window.
+        '_blank' 
     );
 }
 
 function clickLinkedIn() {
     window.open(
         'https://www.linkedin.com/in/dannyshindel',
-        '_blank' // <- This is what makes it open in a new window.
+        '_blank' 
     );
 }
 
 function clickGitHub() {
     window.open(
-        'https://https://github.com/danny-shindel',
-        '_blank' // <- This is what makes it open in a new window.
+        'https://github.com/danny-shindel',
+        '_blank' 
     );
 }
 
 function clickPortfolio() {
     window.open(
         'https://www.linkedin.com/in/dannyshindel',
-        '_blank' // <- This is what makes it open in a new window.
+        '_blank' 
     );
 }
 
