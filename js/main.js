@@ -62,8 +62,10 @@ document.getElementById('gmail').addEventListener('click', clickGmail);
 document.getElementById('linkedin').addEventListener('click', clickLinkedIn);
 document.getElementById('github').addEventListener('click', clickGitHub);
 
-const classes = ['typing0', 'typing1', 'typing2', 'typing3', 'typing4', 'typing5', 'typing6', 'typing7', 'typing8', 'typing9', 'typing10', 'typing11', 'typing12', 'typing13', 'typing14', 'typing15', 'typing16', 'typing17', 'typing18', 'typing19', 'typing20', 'typing21']
-const doc = [textEl0, textEl1, textEl2, textEl3, textEl4, textEl5, textEl6, textEl7, textEl8, textEl9, textEl10, textEl11, textEl12, textEl13, textEl14, textEl15, textEl16, textEl17, textEl18, textEl19, textEl20, textEl21]
+const doc = [textEl0, textEl1, textEl2, textEl3, textEl4, textEl5, textEl6, textEl7,
+    textEl8, textEl9, textEl10, textEl11, textEl12, textEl13, textEl14, textEl15,
+    textEl16, textEl17, textEl18, textEl19, textEl20, textEl21]
+const classes = new Array(22).fill().map((e, i) => `typing${i}`)
 
 
 type()
@@ -105,10 +107,7 @@ function typeName() {
 }
 
 function clickGmail() {
-    window.open(
-        'mailto:dannyshindel@gmail.com',
-        '_blank' 
-    );
+    document.getElementById('gmailLink').click();
 }
 
 function clickLinkedIn() {
