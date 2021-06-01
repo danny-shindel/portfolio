@@ -84,11 +84,11 @@ html {
 .about-container {
     margin-top: 20vh;
     margin: 0 auto;
-    width: 100vh;
+    width: 100vmin;
     color: white;
 }
 .terminal-header {
-    height: 28px;
+    height: 3.5vmin;
     background-color: #e4e3e5;
     border-radius: 10px 10px 0 0;
     display: flex;
@@ -96,8 +96,8 @@ html {
     align-items: center;
 }
 .header-button {
-    width: 12px;
-    height: 12px;
+    width: 2vmin;
+    height: 2vmin;
     border-radius: 50%;
     margin-left: 9px;
 }
@@ -123,6 +123,7 @@ html {
     0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
     font-family: 'Monaco', Consolas, 'Lucida Console', monospace;
     height: 63vmin;
+    width: 100vmin;
     padding: 5vmin;
     font-size: 2vmin;
     
@@ -197,7 +198,7 @@ nav > a:hover {
 
 #projects > header {
     margin: 0 auto;
-    width: 100vh;
+    width: 100vmin;
     font-size: 5vmin;
     margin-bottom: 2vmin;
     font-family: font4;
