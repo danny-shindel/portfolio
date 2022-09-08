@@ -14,7 +14,7 @@ const texts = [
 'dannyshindel.pdf',
 '"',
 '> Danny.skills',
-'["Javascript", "CSS", "HTML", "React", "Python", "Django", "Express", "MongoDB", "Postgresql", "Node", "AWS"]',
+'["Javascript", "CSS", "HTML", "React", "Python", "Django", "Express", "MongoDB", "Postgresql", "Node", "AWS", "Python", "Ruby", "PHP"]',
 '> Danny.education',
 '["Software Engineering - General Assembly",',
 '"B.S. Landscape Architecture - University of California, Davis"]',
