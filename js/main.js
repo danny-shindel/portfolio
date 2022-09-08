@@ -19,7 +19,7 @@ const texts = [
 '["Software Engineering - General Assembly",',
 '"B.S. Landscape Architecture - University of California, Davis"]',
 '> Danny.interests',
-'["design", "surfing", "ceramics", "film"]',
+'["car & motorcycle restoration", "surfing", "ceramics", "film"]',
 '> '];
 let count = 0;
 let index = 0;
